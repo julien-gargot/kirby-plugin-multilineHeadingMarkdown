@@ -2,13 +2,13 @@
 /**
  * Multiline Heading in Markdown.
  *
- * @author Julien Gargot <julien@g-u-i.me>
- * @version 1.0.0
+ * @author Julien Gargot <julien@g-u-i.net>
+ * @version 1.0.1
  */
 kirbytext::$pre[] = function($kirbytext, $text) {
 
   // Add a space after each heading.
-  $pattern = '/(#+)\s*/';
+  $pattern = '/^(#+)\s*/';
   $replacement = '${1} ';
   $text = preg_replace($pattern, $replacement, $text);
 
